@@ -1,0 +1,141 @@
+<!--QHEPS Side nav dependencies: START -->
+<style>
+    @font-face {
+        font-family: "QHEPS-Sidenav";
+        src: url("data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBEoAAAC8AAAAYGNtYXAXVtKHAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5ZgweIwwAAAF4AAAAZGhlYWQVKaKzAAAB3AAAADZoaGVhBe0DxgAAAhQAAAAkaG10eAhAAAAAAAI4AAAAFGxvY2EAKABGAAACTAAAAAxtYXhwAAcACAAAAlgAAAAgbmFtZdEo6ocAAAJ4AAABznBvc3QAAwAAAAAESAAAACAAAwIgAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpAAPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6QD//f//AAAAAAAg6QD//f//AAH/4xcEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAD/wAIrA8AABQAAFycJATcBKysB1f4rKwIAQCsB1QHVK/4AAAAAAQAAAAEAAO/FCUFfDzz1AAsEAAAAAADZ768bAAAAANnvrxsAAP/AAisDwAAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAACKwABAAAAAAAAAAAAAAAAAAAABQQAAAAAAAAAAAAAAAIAAAACQAAAAAAAAAAKABQAHgAyAAEAAAAFAAYAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQANAAAAAQAAAAAAAgAHAJYAAQAAAAAAAwANAEgAAQAAAAAABAANAKsAAQAAAAAABQALACcAAQAAAAAABgANAG8AAQAAAAAACgAaANIAAwABBAkAAQAaAA0AAwABBAkAAgAOAJ0AAwABBAkAAwAaAFUAAwABBAkABAAaALgAAwABBAkABQAWADIAAwABBAkABgAaAHwAAwABBAkACgA0AOxRSEVQUy1TaWRlbmF2AFEASABFAFAAUwAtAFMAaQBkAGUAbgBhAHZWZXJzaW9uIDEuMABWAGUAcgBzAGkAbwBuACAAMQAuADBRSEVQUy1TaWRlbmF2AFEASABFAFAAUwAtAFMAaQBkAGUAbgBhAHZRSEVQUy1TaWRlbmF2AFEASABFAFAAUwAtAFMAaQBkAGUAbgBhAHZSZWd1bGFyAFIAZQBnAHUAbABhAHJRSEVQUy1TaWRlbmF2AFEASABFAFAAUwAtAFMAaQBkAGUAbgBhAHZGb250IGdlbmVyYXRlZCBieSBJY29Nb29uLgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+    }
+
+    /*
+   .qheps-sidenav {
+     width: 268px;
+   }
+   */
+
+    /*## Left hand nav updates */
+    .qheps-sidenav {
+        max-width: 268px;
+        width: auto;
+    }
+
+    .qheps-sidenav a {
+        color: #1375bc;
+        /* text-decoration: none; */
+    }
+
+    .qheps-sidenav h3 a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .qheps-sidenav ul {
+        list-style: none;
+        padding-top: 0 !important;
+        padding-left: 15px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .qheps-sidenav ul li {
+        margin: 0 0 10px 0 !important;
+        padding-bottom: 0;
+    }
+
+    .qheps-sidenav ul>li>div {
+        margin-right: 0 !important
+    }
+
+
+    .qheps-sidenav ul li:last-child {
+        margin: 0 0 0 0 !important;
+    }
+
+    .qheps-sidenav .nav-heading+ul {
+        margin-top: 10px;
+    }
+
+    .qheps-sidenav .nav-group {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 15px;
+    }
+
+    .qheps-sidenav .nav-group .nav-heading {
+        padding: 0 30px 0 0;
+        margin-right: 0 !important;
+        position: relative;
+    }
+
+    .qheps-sidenav .nav-group>.nav-heading {
+        font-size: 12px;
+    }
+
+    .qheps-sidenav .nav-group .nav-heading .nav-expand {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        color: #1375bc;
+        font-family: "QHEPS-Sidenav" !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        top: 2px;
+        right: 3px;
+        cursor: pointer;
+    }
+
+    .qheps-sidenav .nav-group .nav-heading .nav-expand:before {
+        content: "\e900";
+        font-size: 12px;
+    }
+
+    .qheps-sidenav .nav-group .nav-heading.expand .nav-expand {
+        transform: rotate(90deg);
+    }
+
+    .qheps-sidenav .nav-group>div+ul {
+        display: none;
+    }
+
+    .qheps-sidenav .nav-group>div+ul>li>ul {
+        display: none;
+    }
+</style>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            /**
+             * Find each collapsible nav grouping and add an expand button
+             */
+            $(".qheps-sidenav .nav-group .nav-heading").each(function (index) {
+                $(this).append('<span class="nav-expand"></span>');
+            });
+
+            var $navExpand = $(".nav-expand");
+
+            /**
+             * Wire up functionality to expand or collapse sibling navigation item of a nav heading
+             */
+            $($navExpand).each(function (index) {
+                $(this).click(function (e) {
+                    e.preventDefault();
+
+                    $parent = $(this).parent();
+                    $($parent).toggleClass("expand");
+                    $($parent)
+                        .find("+ ul")
+                        .toggle();
+                });
+            });
+        });
+    })(jQuery);
+</script>
+<!--QHEPS Side nav dependencies: END -->
