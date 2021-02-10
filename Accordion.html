@@ -1,0 +1,118 @@
+<!-- Icon Accordion START -->
+<style>
+  .icon-accordion {
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 1px solid #ccc;
+  }
+
+  .icon-accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .icon-accordion-item .icon-accordion-heading {
+    padding: 15px 45px 15px 0px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .icon-accordion-item .icon-accordion-heading .accordion-icon {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+  }
+
+  .icon-accordion-item .icon-accordion-heading h3 {
+    font-size: 16px;
+    color: #1375bc;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .icon-accordion-item .icon-accordion-heading .accordion-icon + h3 {
+    padding-left: 40px;
+  }
+
+  .icon-accordion-item .icon-accordion-heading:before {
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    content: '+';
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    background: #84c447;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .icon-accordion-item.expand .icon-accordion-heading:before {
+    content: '-';
+    line-height: 13px;
+  }
+
+  .icon-accordion-item .icon-accordion-content {
+    transition: transform 0.25s ease-out, padding 0.125s ease-out;
+    transform: scaleY(0);
+    transform-origin: top;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .icon-accordion-item.expand .icon-accordion-content {
+    transform: scaleY(1);
+    padding: 0 0 20px;
+    height: auto;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+    initAccordions();
+  });
+
+  function initAccordions() {
+    var accordions = document.querySelectorAll('.icon-accordion');
+
+    for (var i = 0; i < accordions.length; i++) {
+      var accordionItems = accordions[i].querySelectorAll(
+        '.icon-accordion-item'
+      );
+
+      for (var j = 0; j < accordionItems.length; j++) {
+        var accordionHeading = accordionItems[j].querySelector(
+          '.icon-accordion-heading'
+        );
+
+        accordionHeading.addEventListener('click', function(event) {
+          expandItem(event.currentTarget);
+        });
+      }
+    }
+
+    function expandItem(accordionHeading) {
+      var accordionItem = accordionHeading.parentNode;
+      var expanded = accordionItem.parentNode.querySelector('.expand');
+
+      if (expanded) {
+        expanded.classList.remove('expand');
+      }
+
+      if (expanded !== accordionItem) {
+        accordionItem.classList.add('expand');
+      }
+    }
+  }
+</script>
+<!-- Icon Accordion END -->
