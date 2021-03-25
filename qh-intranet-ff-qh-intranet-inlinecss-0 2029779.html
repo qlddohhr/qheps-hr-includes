@@ -90,11 +90,8 @@ html {
     background: #58686b;
 }
 /*## Navigation: Left column */
-/**
- * Made top margin 0 as it was offset from the top of the page
- */
 #nav2 {
-    width: 268px; 
+    width: 268px;
     margin: 0 15px 15px;
     padding: 0;
 }
@@ -120,10 +117,6 @@ html {
 #nav2 ul li ul li a:hover {
     color: #5eac61;
 }
-
-/**
- * Reduced negative margin to prevent icons from being cut off
- */
 #nav2 ul li ul li {
     list-style: none;
     list-style-image: none;
@@ -192,9 +185,6 @@ h3.sidebar {
     margin: 0;
     padding: 5px;
 }
-/*
- * Set max-width instead of width to prevent overlap
- */
 .sidebar_section {
     max-width: 268px;
     border-bottom: 1px solid #1375bc;
@@ -223,9 +213,6 @@ h3.sidebar {
 .quick_links li:last-child {
     border-bottom: none;
 }
-/**
- * Reduced negative margin to prevent icons from being cut off
- */
 #nav2 .quick_links li {
     margin: 6px 0 6px -2.5em;
 }
@@ -243,13 +230,11 @@ h3.sidebar {
 
 
 /*## Right hand side aside OVERRIDES */
-/* Fixes issue with white space */
 body #rhs-aside {
     max-width: 268px;    
     border-left: none;
 }
 
-/* Fixes issue where increase in font sizes resulted in headings being larger */
 body #rhs-aside h3 {
     font-size: inherit;
 }
@@ -275,6 +260,7 @@ body #rhs-aside h3 {
     background: url(/hr/images/background/bottombgwrap.gif) top repeat-x;
 }
 /*# HTML Elements **********************************************/
+/*## Typography */
 a,
 a:visited,
 .ui-widget-content a {
@@ -316,7 +302,8 @@ h2 {
 }
 h3 {
     clear: both;
-    color: #75c045;
+    color: #55a559; /* color update for WCAG */
+    font-weight: bold;
     font-size: 16px;
     margin: 16px 0 5px;
     line-height: 120%;
@@ -332,7 +319,8 @@ h4 {
 }
 h5 {
     clear: both;
-    color: #75c045;
+    color: #55a559; /* color update for WCAG */
+    font-weight: bold;
     font-size: 14px;
     margin: 16px 0 5px;
     line-height: 110%;
@@ -367,11 +355,28 @@ blockquote {
     margin-left: 0px;
     border-left: 4px solid #c0c5be;
     padding-left: 15px;
+  
 }
 blockquote.large {
     color: #08416a;
     font-size: 1.4em;
     margin-bottom: 1.5em;
+    
+}
+blockquote.shade-grey {
+    width: 100%;
+    background: #f9f9f9;
+    border-color: #49575a;
+}
+blockquote.shade-blue {
+    width: 100%;
+    background: #e7eef5;
+    border-color: #0f5ca2;
+}
+blockquote.shade-green {
+    width: 100%;
+    background: #e2f0e2;
+    border-color: #6fb572;
 }
 .figcaption {
     margin-top: 5px;
@@ -711,10 +716,6 @@ div#accordion {
     color: #fff;
     background-color: #84c447 !important;
 }
-
-/*
- * Accordion has important applied to fix issue where jquery UI default styles took priority over HR customisation
- */
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
     background-image: url(/hr/images/list_icons/icon_contract-white.png) !important;
@@ -1083,6 +1084,7 @@ input[type=checkbox]:not(old):checked.fa-check+label>span:before {
 .btn span {
     flex-grow: 3;
     flex-shrink: 3;
+    line-height: 1.2; /* Decrease to fix label text */
 }
 a.btn,
 a.btn:hover {
@@ -1090,7 +1092,8 @@ a.btn:hover {
     text-decoration: none;
 }
 a.btn:hover {
-    background-color: #6fb572;
+    /*background-color: #6fb572;*/
+    background-color: #757575; /* color update for WCAG */
     /*transform: scale(1.02);*/
 }
 .btn-lg {
@@ -1220,10 +1223,10 @@ a.text-black {
     background-color: #000;
 }
 .bg-off-white {
-    background-color: #eee;
+    background-color: #eee !important;
 }
 .bg-raw-cotton {
-    background-color: #c0c5be;
+    background-color: #c0c5be !important;
 }
 .bg-med-grey {
     background-color: #b3bfb3;
@@ -1252,10 +1255,10 @@ a.text-blue {
     background-color: #8abeed;
 }
 .bg-light-blue {
-    background-color: #ddeffd;
+    background-color: #ddeffd !important;
 }
 .bg-faint-blue {
-    background-color: #ebf5fd;
+    background-color: #ebf5fd !important;
 }
 .text-green,
 a.text-green {
@@ -1645,9 +1648,6 @@ ul.resources {
     margin: 0 0 0 -1.3em;
 }
 
-/**
- * Reduced negative margin to prevent icons from being cut off
- */
 #nav2 ul li {
     margin: 0 0 0.5em -1.5em;
 }
