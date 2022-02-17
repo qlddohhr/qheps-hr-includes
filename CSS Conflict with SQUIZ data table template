@@ -1,0 +1,12 @@
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.bxslider').bxSlider({
+        auto: true,
+        randomStart: true,
+        pause: 8000,
+        controls: false
+    });
+});
+</script>
+
+<!-- 2022-02-15 Datatable fix suggestion <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script> -->
